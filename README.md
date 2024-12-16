@@ -5,13 +5,13 @@ This project focuses on the automatic classification of sleep stages using singl
 
 - CNNTransformer
 - CNNLSTM
-- Multi-Scale CNN-based Representation Learning
-- Feature-Enhanced Multi-Scale Convolutional Transformer (FEMSCTNet)
+- 2-Scale Convolutional Transformer(2-SCTNet)
+- 3-Scale Convolutional Transformer(3-SCTNet)
 
-The goal was to improve the accuracy and efficiency of sleep stage classification. This project uses the Sleep-EDF20 dataset, which contains polysomnographic (PSG) files and hypnograms stored in the `Data` folder.
+The goal was to improve the accuracy and efficiency of sleep stage classification. This project uses the Sleep-EDF20 dataset, which contains polysomnographic (PSG) files and hypnograms.
 
 ## Features
-- Preprocessing of EEG signal for model input.
+- Preprocessing of EEG data for model input.
 - Implementation of four different deep models.
 - Evaluation metrics: Accuracy, F1 Score, and Loss.
 - Classification report for detailed performance analysis.
@@ -33,6 +33,8 @@ PSG files               # Contains raw PSG
 ├── README.md           # Project documentation
 ├── requirements.txt    # List of dependencies
 ```
+
+
 
 ## Getting Started
 ### Prerequisites
@@ -58,8 +60,48 @@ Install dependencies:
    ```
 
 ## Usage
-### Step 1: Preprocessing
-The Sleep-EDF20 dataset is available on Physionet website. First download the dataset and then preprocess the raw data before training the models. Run the following command:
+### Step 1: Downloading Sleep_EDF-20 Dataset
+To download the Sleep-EDF20 dataset files, the script sleep_edf_20.sh is provided in the scripts folder on our GitHub repository.
+
+
+
+
+Follow these steps to run the script:
+
+1-Ensure wget is installed:
+On macOS:
+```bash
+brew install wget
+```
+On Linux:
+```bash
+sudo apt-get install wget
+```
+2-Navigate to the data folder
+```bash
+cd data
+```
+3-Download the sleep_edf_20.sh script from our [Visit our GitHub Repository](https://github.com/AshkanRashvand/Sleep-Stage-Classification)
+
+. You can use the following command:
+```bash
+wget https://github.com/AshkanRashvand/Sleep-Stage-Classification/blob/main/sleep_edf_20.sh
+```
+
+3-Make the script executable:
+```bash
+chmod +x sleep_edf_20.sh
+```
+4-Run the script to download the dataset:
+```bash
+./sleep_edf_20.sh
+
+```
+The downloaded files will be saved in the data folder.
+
+
+### Step 2: Preprocessing
+For preprocessing the raw EEG data before training the models. Run the following command:
 ```bash
 python src/preprocessing.py
 ```
