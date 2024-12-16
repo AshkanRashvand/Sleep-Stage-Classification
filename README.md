@@ -120,12 +120,12 @@ Train and evaluate the models using the preprocessed data. To run a specific mod
   python src/CNNTransformer.py
   ```
 
-- For Multi-Scale CNN-based Representation Learning:
+- For 2-:  2-Scale Convolutional Transformer(2-SCTNet):
   ```bash
   python src/MRCNNT.py
   ```
 
-- For : Feature-Enhanced Multi-Scale Convolutional Transformer (FEMSCTNet)
+- For : 3-Scale Convolutional Transformer(3-SCTNet):
   ```bash
   python src/MRCNNT3.py
   ```
